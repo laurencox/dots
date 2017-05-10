@@ -4,6 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Dots</title>
+
+  <script src="js/smoothscroll.js"></script>
+
 </head>
 
   <style>
@@ -17,16 +20,26 @@
   }
 
 body {
-max-width: 90%;
-margin-right: 2em;
+  max-width: 60em;
+  /*padding: 0 1em;*/
+  margin: 0 auto;
+}
 
+img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+padding: 1.5em;
 }
 
 #title {
-margin-left: 1.7em;
 padding-top: 3em;
-padding-right: 2em;
-padding-bottom: 1.5em;
+max-width: 90%;
+text-align: center;
+margin-left: 1em;
 }
 
 nav {
@@ -47,7 +60,7 @@ nav ul {
   list-style: none;
 	/*padding: 1em 1em 0;*/
 	margin-top: 0;
-	margin-left: .25em;
+	/*margin-left: .25em;*/
 	margin-bottom: 0;
 }
 
@@ -108,20 +121,19 @@ margin-top: 3.5em;
 background: url("img/aaa.png") no-repeat center 1em;
 background-size: 8%;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-/*box-shadow: 5px 5px 5px 5px #BDBDBD;*/
+box-shadow: 5px 5px 5px 5px #BDBDBD;
 border-radius: 10px;
 padding: 10px;
 padding-top: 2.5em;
-margin-left: 1.5em;
 }
 
 #spec1 {
   width: 110%;
   padding-top: 5em;
-  margin-left: .49em;
+  /*margin-left: .49em;*/
 }
 
-.circle {
+a.circle {
   font-family: "Fibon Sans", Arial, sans-serif;
   font-size: 1.5em;
   width: 6em;
@@ -149,13 +161,8 @@ margin-left: 1.5em;
   padding: 2em 0;
 }
 
-a:link {
-color: white;
-text-decoration: none;
-}
-
 a:visited {
-  color: white;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -199,10 +206,12 @@ width: 110%;
 }
 
 .top {
+float: right;
   font-family: "Fibon Sans", Arial, sans-serif;
   font-size: 1.5em;
-  color: black;
+  color: #000;
   margin-left: 5em;
+  text-decoration:
 }
 
 .top:visited {
@@ -210,10 +219,10 @@ width: 110%;
 }
 
 .copy {
+    float: left;
     font-family: "Fibon Sans", Arial, sans-serif;
-    margin-top: 3.5em;
-    margin-left: 1.5em;
-    text-align: center;
+    font-size: 1em;
+    margin-left: 2em;
 }
 
 @media (min-width: 30em) {
@@ -246,10 +255,6 @@ width: 110%;
   }
 
 
-
-
-
-
 }
 
   </style>
@@ -261,9 +266,9 @@ width: 110%;
 
   <nav>
   <ul>
-    <li><a class="about" href="#desc2">About<a/></li>
-    <li><a class="down" href="#spec1">Download<a/></li>
-    <li><a class="spec" href="#typekeys">Specimens<a/></li>
+   <li><a class="down" href="#spec1" data-scroll>Download<a/></li>
+    <li><a class="spec" href="#typekeys" data-scroll>Specimens<a/></li>
+        <li><a class="about" href="#desc2" data-scroll>About<a/></li>
 </nav>
 
 <div class="desc1">
@@ -271,9 +276,9 @@ width: 110%;
   <p>26 unique icons <br> made with a typewriter</p>
 </div>
 
-<figure>
+
 <img id="spec1" alt="specimen" src="img/dotsspec1.png">
-</figure>
+
 
 
 <a class="circle" href="#download">
@@ -283,22 +288,21 @@ width: 110%;
 
 <h1 class="specimens">Specimens</h1>
 
-<figure>
   <img id="typekeys" src="img/typekeys.png">
-</figure>
 
-<figure>
+
+
   <img id="knockout" src="img/knockout.png">
-</figure>
+
 
 <div id="desc2">
-<p>Dots is an ornamental iconset created using a 1959 Royal Diana typewriter. By typing letters repeatedly and turning the paper at a different angle, a unique pattern is created. </p>
+<p>Dots is an ornamental icon set created using a 1959 Royal Diana typewriter. I made these icons by overlapping letters By vectorizing the overlapped sections of letters from the notepad typewriter drawings that I created for my senior design thesis project</p>
 </div>
 
 <a class="top" href="#top">Back to top</a>
 
 <p class="copy">
-Website by Lauren Cox &copy 2017
+&copy; Lauren Cox 2017
 </p>
 
 </body>
