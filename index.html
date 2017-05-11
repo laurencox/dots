@@ -6,6 +6,7 @@
   <title>Dots</title>
 
   <script src="js/smoothscroll.js"></script>
+  <script src="js/backtotop.js"></script>
 
 </head>
 
@@ -60,9 +61,9 @@ nav a {
 
 nav ul {
   list-style: none;
-	/*padding: 1em 1em 0;*/
+	padding: 1em 1em 0;
 	margin-top: 0;
-	/*margin-left: .25em;*/
+	margin-left: .25em;
 	margin-bottom: 0;
 }
 
@@ -173,7 +174,7 @@ padding-top: 2.5em;
 }*/
 
 .specimens {
-  font-family: "Fibon Sans", Arial, sans-serif;
+  font-family: "Fibon Sans", "Trebucet MS", sans-serif;
   font-size: 3em;
   text-align: center;
   margin-top: 3em;
@@ -205,23 +206,36 @@ margin-top: 4em;
     margin-bottom: 3em;
 }
 
-.top {
-float: right;
-  font-family: "Fibon Sans", "Trebuchet MS", sans-serif;
-  font-size: 1.5em;
-  color: #000;
-  margin-left: 5em;
-  text-decoration: none;
+#top {
+    font-family: "Fibon Sans", "Trebuchet MS", sans-serif;
+    background: url("img/toparrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    float: right;
+    display: none;
+    position: fixed;
+    text-align: center;
+    bottom: 20px;
+    right: 15px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #ccc;
+    color: white;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 4px;
 }
 
-.top:visited {
-  color: black;
+#top:hover {
+    background-color: #555;
 }
 
 .copy {
     float: left;
     font-family: "Fibon Sans", "Trebuchet MS", sans-serif;
     font-size: 1em;
+    margin-bottom: 1em;
 }
 
 @media (min-width: 30em) {
@@ -298,7 +312,9 @@ float: right;
 <p>Dots is an ornamental icon set created using a 1959 Royal Diana typewriter. I made these icons by overlapping letters By vectorizing the overlapped sections of letters from the notepad typewriter drawings that I created for my senior design thesis project</p>
 </div>
 
-<a class="top" href="#top">Back to top</a>
+<div>
+<button onclick="topFunction()" id="top" </button>
+</div>
 
 <p class="copy">
 &copy; Lauren Cox 2017
